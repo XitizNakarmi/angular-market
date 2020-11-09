@@ -1,0 +1,7 @@
+<span>Categories:</span>
+<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" *ngFor="let category of categories">
+  <a (click)="onClickCategory(category)" class="nav-link" style="cursor: pointer" aria-selected="true">
+    {{category | titlecase}}
+  </a>
+</div>
+<button (click)="onClear()" class="btn btn-light">Clear</button>

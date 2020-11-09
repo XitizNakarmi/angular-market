@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-9">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of filteredProducts">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+               alt="Card image cap"
+               [src]=product.image
+               [style.max-height.px]="imageProps.height"
+               [style.margin.px]="imageProps.margin"
+               (click)="gotoProductDetail(product.id)"
+          >
+          <div class="card-body">
+            <button type="button" class="btn btn-link" style="color: black" (click)="gotoProductDetail(product.id)">
+              <h5 class="card-title">{{product.name}}</h5>
+            </button>
+            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">
+              <app-star [rating]="product.rating"></app-star>
+            </p>
+            <p class="card-text">{{product.price | currency: 'USD':'symbol'}}</p>
+            <p class="card-text">{{product.noReview}} Reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-side-bar class="col-md-3" (filterProducts)="assignFilteredProducts($event)" [categories]="categories"
+                [products]="products"></app-side-bar>
+</div>
+

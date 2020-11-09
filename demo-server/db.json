@@ -1,0 +1,37 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Hammer",
+      "rating": 4.5,
+      "price": 45,
+      "description": "Sturdy hammer of 2.5 lbs with wooden shaft",
+      "noReview": 200,
+      "status": "In Stock",
+      "category": "Carpenting",
+      "image": "./assets/images/hammer.png"
+    },
+    {
+      "id": 2,
+      "name": "Cart",
+      "rating": 3,
+      "price": 100,
+      "description": "Made out of metal can hold upto 5000lbs",
+      "noReview": 130,
+      "status": "In Stock",
+      "category": "Gardening",
+      "image": "./assets/images/garden_cart.png"
+    },
+    {
+      "id": 3,
+      "name": "Saw",
+      "rating": 5,
+      "price": 75,
+      "description": "High grade metal with plastic handle",
+      "noReview": 20,
+      "status": "In Stock",
+      "category": "Carpenting",
+      "image": "./assets/images/saw.png"
+    }
+  ]
+}

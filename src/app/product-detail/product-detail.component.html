@@ -1,0 +1,30 @@
+<div class="row">
+  <button type="button" class="btn btn-link" style="color: black" (click)="goBack()">
+    <i class="fas fa-angle-left" style="font-size: 3em"></i>
+  </button>
+</div>
+<div class="row">
+  <div class="col-sm">
+    <img src="{{productDetail.image}}" style="max-width: 330px">
+  </div>
+  <div class="col-sm">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{productDetail.name}}</li>
+      <li class="list-group-item">
+        <app-star [rating]="productDetail.rating"></app-star>
+        {{productDetail.noReview}} reviews
+      </li>
+      <li class="list-group-item">Price: {{productDetail.price | currency: 'USD':'symbol'}}</li>
+      <li class="list-group-item">Description: {{productDetail.description}}</li>
+    </ul>
+  </div>
+  <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <p class="card-text">Price: {{productDetail.price | currency: 'USD':'symbol'}}</p>
+        <p class="card-text">Status: {{productDetail.status}}</p>
+        <a href="#" class="btn btn-primary">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
