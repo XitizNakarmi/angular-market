@@ -8,7 +8,7 @@ import {IProduct} from '../interface/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private PRODUCT_URL = 'http://localhost:3000/product';
+  public PRODUCT_URL = 'http://localhost:3000/product';
 
   constructor(private http: HttpClient) {
   }
@@ -24,7 +24,7 @@ export class ProductService {
     return this.http.get<IProduct>(`${this.PRODUCT_URL}/${id}`)
       .pipe(catchError(err => {
         console.log(err);
-        return throwError(`Error from getAllProducts: ${err}`);
+        return throwError(`Error from getProduct: ${err}`);
       }));
   }
 }
